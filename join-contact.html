@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Member Registration & ID Card Application</title>
+    <meta
+      name="description"
+      content="Official membership registration and ID card application form."
+    />
+
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <style>
+      .page-hero-unified {
+        background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+        color: #ffffff;
+        padding: 60px 24px;
+        text-align: center;
+      }
+      .page-hero-unified h1 {
+        color: #ffffff;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        margin-bottom: 12px;
+        font-weight: 800;
+      }
+      .page-hero-unified p {
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.05rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ======================================== -->
+    <!-- HEADER -->
+    <!-- ======================================== -->
+    <header class="main-header">
+      <div class="logo-area">
+        <a href="index.html" class="logo-branding" style="text-decoration: none;">
+          <div style="width: 44px; height: 44px; background: #2563eb; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <div>
+            <h2 id="headerOrgTitle" style="font-size: 1.15rem; margin: 0; color: #0f172a;">Member Registration</h2>
+            <span style="font-size: 0.8rem; color: #64748b;">Official Member & ID Portal</span>
+          </div>
+        </a>
+
+        <div class="header-actions">
+          <button class="menu-toggle-btn" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <div class="nav-item-wrapper">
+              <a href="index.html">Home</a>
+            </div>
+          </li>
+          <li>
+            <div class="nav-item-wrapper">
+              <a href="join-contact.html" class="active">Member Registration</a>
+            </div>
+          </li>
+          <li>
+            <div class="nav-item-wrapper">
+              <a href="member-login.html">Member Portal</a>
+            </div>
+          </li>
+          <li>
+            <div class="nav-item-wrapper">
+              <a href="admin-login.html">Admin Portal</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ======================================== -->
+    <!-- PAGE HERO -->
+    <!-- ======================================== -->
+    <section class="page-hero-unified">
+      <div class="container">
+        <h1>Member Registration & ID Card Application</h1>
+        <p>
+          Submit your official application to obtain your verified Digital Membership Card and join our active community.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- MEMBERSHIP FORM -->
+    <!-- ======================================== -->
+    <section id="membership">
+      <div class="section-title">
+        <span>Registration</span>
+        <h2>New Member Application Form</h2>
+      </div>
+
+      <form id="membershipForm">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" name="fullName" placeholder="Enter your full legal name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Father's / Guardian's Name *</label>
+          <input type="text" name="fatherName" placeholder="Enter father or guardian's name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number *</label>
+          <input type="tel" name="mobile" placeholder="10-digit mobile number" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" name="email" id="memberEmailInput" placeholder="name@example.com" required />
+
+          <div class="google-verify-container">
+            <button type="button" id="googleVerifyBtn" class="google-verify-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48" style="vertical-align:middle;margin-right:8px;">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                <path fill="none" d="M0 0h48v48H0z"/>
+              </svg>
+              Verify Email with Google
+            </button>
+            <div id="googleVerifyStatus" class="google-verify-status" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Full Residential Address *</label>
+          <textarea name="address" placeholder="Door No, Street, City/Town, District, Pincode" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth *</label>
+          <input type="date" name="dob" required />
+          <small style="color: #64748b; font-size: 0.8rem; display: block; margin-top: 4px;">
+            (Applicants must be at least 18 years of age)
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label>Occupation *</label>
+          <input type="text" name="occupation" placeholder="e.g. Professional, Business, Student, Volunteer" required />
+        </div>
+
+        <div class="form-group">
+          <label>Gender *</label>
+          <select name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Blood Group *</label>
+          <select name="bloodGroup" required>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Member Photo *</label>
+          <input
+            type="file"
+            name="photo"
+            id="photoInput"
+            accept="image/*"
+            required
+          />
+          <small style="color: #64748b; font-size: 0.82rem; display: block; margin-top: 6px; line-height: 1.6;">
+            📸 <strong>Accepted Formats:</strong> JPG, PNG, WEBP (Max 5 MB)<br />
+            📐 <strong>Requirement:</strong> Clear passport-style front-facing portrait
+          </small>
+          <small id="photoError" style="color: #dc2626; font-size: 0.82rem; display: none; margin-top: 4px;"></small>
+        </div>
+
+        <div class="form-group">
+          <label>Government ID Proof (Any One) *</label>
+          <input
+            type="file"
+            name="governmentProof"
+            id="govProofInput"
+            accept=".pdf,.jpg,.jpeg,.png"
+            required
+          />
+          <small style="color: #64748b; font-size: 0.82rem; display: block; margin-top: 6px; line-height: 1.6;">
+            📋 <strong>Accepted IDs:</strong> Aadhaar Card, Voter ID, Driving License, Passport<br />
+            📄 <strong>Accepted Formats:</strong> JPG, PNG, PDF (Max 10 MB)
+          </small>
+          <small id="govProofError" style="color: #dc2626; font-size: 0.82rem; display: none; margin-top: 4px;"></small>
+        </div>
+
+        <div class="notice-box" style="background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; border-radius: 8px; padding: 14px; margin: 18px 0; font-size: 0.9rem;">
+          <strong>🔒 Privacy & Data Protection:</strong>
+          Government ID documents uploaded for verification are reviewed exclusively by authorized administrators and handled with high security.
+        </div>
+
+        <div class="form-group">
+          <label>Membership Category *</label>
+          <div>
+            <label><input type="radio" name="membertype" value="member" required checked /> Regular Member</label>
+          </div>
+          <div style="margin-top: 6px;">
+            <label><input type="radio" name="membertype" value="active-member" required /> Active Volunteer Member</label>
+          </div>
+        </div>
+
+        <div class="notice-box" style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; border-radius: 8px; padding: 14px; margin: 18px 0; font-size: 0.9rem;">
+          <strong>Application Workflow:</strong>
+          <br /><br />
+          ✓ Step 1: Google Email Verification<br />
+          ✓ Step 2: Administrator Document Screening & Approval<br />
+          ✓ Step 3: Unique Member ID Allocation & Digital ID Card Generation
+        </div>
+
+        <button type="submit" id="membershipSubmitBtn" disabled style="width: 100%; background: #2563eb; color: white; padding: 14px; border: none; border-radius: 12px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s;">
+          Submit Application
+        </button>
+      </form>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- MEMBER BENEFITS -->
+    <!-- ======================================== -->
+    <section style="background: #f8fafc; padding: 60px 20px;">
+      <div class="section-title">
+        <span>Privileges</span>
+        <h2>Benefits for Registered Members</h2>
+      </div>
+
+      <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
+        <div class="benefit-card" style="background: white; padding: 24px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+          <h3 style="margin-top: 0; color: #2563eb; font-size: 1.15rem;">🪪 Verified Digital ID Card</h3>
+          <p style="color: #64748b; margin-bottom: 0; font-size: 0.92rem;">Official photo ID card with unique membership number and QR verification.</p>
+        </div>
+
+        <div class="benefit-card" style="background: white; padding: 24px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+          <h3 style="margin-top: 0; color: #2563eb; font-size: 1.15rem;">🤝 Community Participation</h3>
+          <p style="color: #64748b; margin-bottom: 0; font-size: 0.92rem;">Direct engagement in community initiatives, projects, and special programs.</p>
+        </div>
+
+        <div class="benefit-card" style="background: white; padding: 24px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+          <h3 style="margin-top: 0; color: #2563eb; font-size: 1.15rem;">🛡️ Support Network</h3>
+          <p style="color: #64748b; margin-bottom: 0; font-size: 0.92rem;">A collaborative peer network providing civic guidance and mutual assistance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- FOOTER -->
+    <!-- ======================================== -->
+    <footer class="footer-simple" style="background: #ffffff; padding: 24px 20px; text-align: center; border-top: 1px solid #e2e8f0;">
+      <p style="margin: 0 0 6px; font-weight: 600; color: #0f172a;">Member Registration & Digital ID Portal</p>
+      <p style="margin: 0; font-size: 0.82rem; color: #64748b;">
+        Official Portal | Secure Membership Registration & Verification
+      </p>
+    </footer>
+
+    <script type="module" src="js/navigation.js"></script>
+    <script type="module" src="js/pages/join-contact.js"></script>
+  </body>
+</html>
